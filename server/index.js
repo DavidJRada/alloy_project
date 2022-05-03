@@ -9,7 +9,9 @@ app.use(express.static(__dirname + '/../react-client/dist'));
 
 app.use(bodyParser.json())
 
-let data = 'Insert Token';
+const alloy_auth = process.env.alloy_auth
+
+let data = alloy_auth;
 let buff = new Buffer(data);
 let base64data = buff.toString('base64');
 
