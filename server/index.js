@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/../react-client/dist'));
 
 app.use(bodyParser.json())
 
-const alloy_auth = process.env.alloy_auth
+const alloy_auth = process.env.ALLOY_AUTH;
 
 let data = '${alloy_auth}';
 let buff = new Buffer(data);
@@ -35,5 +35,5 @@ app.post('/onboarding', function (req, res) {
 });
 
 app.listen([process.env.PORT || 3000], function() {
-  console.log('listening on port 3000!');
+  console.log('listening on port ${process.env.PORT || 3000}!');
 });
