@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../../../.gitignore/node_modules/axios';
 import React from 'react';
 
 class ApplicantForm extends React.Component {
@@ -35,7 +35,13 @@ class ApplicantForm extends React.Component {
       payload: this.state
     }).then((res) => {
       console.log(res)
-      alert('Result: ' + res.data.candidateOutcome);
+        if(res.data.candidateOutcome == "Manual Review") {
+          alert("Thanks for submitting your application, we'll be in touch shortly")
+        } else if (res.data.candidateOutcome == "Denied") {
+          alert("Sorry, your application was not successful")
+        } else {
+          alert("Congratulations, you have been approved!")
+        }
     })
     event.preventDefault();
   }
