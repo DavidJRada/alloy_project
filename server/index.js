@@ -9,9 +9,10 @@ app.use(express.static(__dirname + '/../react-client/dist'));
 
 app.use(bodyParser.json())
 
-const alloy_auth = process.env.ALLOY_AUTH;
+const alloy_username = process.env.ALLOY_USERNAME
+const alloy_password = process.env.ALLOY_PASSWORD
 
-let data = '${alloy_auth}';
+let data = `${alloy_username}:${alloy_password}``;
 let buff = new Buffer(data);
 let base64data = buff.toString('base64');
 
