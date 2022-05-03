@@ -11,7 +11,7 @@ app.use(bodyParser.json())
 
 const alloy_auth = process.env.alloy_auth
 
-let data = alloy_auth;
+let data = '${alloy_auth}';
 let buff = new Buffer(data);
 let base64data = buff.toString('base64');
 
