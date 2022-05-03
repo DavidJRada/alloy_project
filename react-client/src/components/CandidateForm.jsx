@@ -1,4 +1,4 @@
-import axios from '../../../.gitignore/node_modules/axios';
+import axios from 'axios';
 import React from 'react';
 
 class ApplicantForm extends React.Component {

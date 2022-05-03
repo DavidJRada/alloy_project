@@ -1,6 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var axios = require('../.gitignore/node_modules/axios');
+var axios = require('axios');
 const { response } = require('express');
 
 var app = express();
