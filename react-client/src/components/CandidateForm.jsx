@@ -34,7 +34,6 @@ class ApplicantForm extends React.Component {
     axios.post('/onboarding', {
       payload: this.state
     }).then((res) => {
-      console.log(res)
         if(res.data.candidateOutcome == "Manual Review") {
           alert("Thanks for submitting your application, we'll be in touch shortly")
         } else if (res.data.candidateOutcome == "Denied") {

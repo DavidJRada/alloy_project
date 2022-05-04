@@ -27,7 +27,6 @@ app.post('/onboarding', function (req, res) {
     ...req.body.payload
     }, config,
   ).then((response) => {
-    console.log(response.data)
     res.send(
       {
         candidateOutcome: response.data.summary.outcome
